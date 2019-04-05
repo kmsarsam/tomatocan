@@ -14,8 +14,12 @@
 
   <tbody>
     <% @timeslots.each do |timeslot| %>
+     
       <tr>
-        <td><%= timeslot.user_id %></td>
+        <td>
+          <% user = User.find(timeslot.user_id) %>
+          <%= link_to user.name, user.permalink, id: "calendar-host" %>
+        </td>
         <td><%= timeslot.start_at %></td>
         <td><%= timeslot.end_at %></td>
         <td><%= link_to 'Show', timeslot %></td>

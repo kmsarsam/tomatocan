@@ -2,7 +2,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @timeslot.user_id %>
+	<% user = User.find(@timeslot.user_id) %>
+	<%= link_to user.name, user.permalink, id: "calendar-host" %>
 </p>
 
 <p>

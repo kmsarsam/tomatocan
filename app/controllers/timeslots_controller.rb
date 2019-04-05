@@ -1,5 +1,6 @@
  class TimeslotsController < ApplicationController
   before_action :set_timeslot, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :new, :create]
 
   # GET /timeslots
   def index
