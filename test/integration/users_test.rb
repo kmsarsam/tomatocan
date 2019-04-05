@@ -168,5 +168,5 @@ class UsersTest < ActionDispatch::IntegrationTest
 	end
 	#test number of panels
 
-		
+		end
 end

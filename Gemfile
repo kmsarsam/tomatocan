@@ -44,6 +44,10 @@ group :test, :development do
 #  gem 'factory_girl_rails'
   gem 'capybara'
 #  gem 'mocha', '~> 1.1.0'
+gem 'stripe-ruby-mock', :require =>'stripe_mock'
+
+
+
 end
 
 group :production do
